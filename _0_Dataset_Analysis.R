@@ -161,7 +161,7 @@ for (city in cities) {
       values = c("Meteo 1" = "#1f78b4", "Meteo 2" = "#e31a1c"),
       labels = c("Pre-Implementation", "Post-Implementation")
     ) +
-    labs(title = paste(city, ", K-S test p-value < 0.05, D:", round(ks_result$statistic, 3)), x = "T(max) (°C)", y = "Frequency") +
+    labs(title = paste(city, ", K-S test p-value < 0.05, D:", round(ks_result$statistic, 3)), x = "T(mean) (°C)", y = "Frequency") +
     theme_minimal() +
     theme(legend.position = "none", panel.border = element_rect(color = "black", fill = NA))
   
@@ -201,7 +201,7 @@ print(combined_plot)
 
 rm(cdf_plot, city_plot, combined_plot, meteo_1, meteo_2, meteo_1_city, 
    meteo_2_city, plots_list, ks_results, histogram_plot, tmean_1, tmean_2,
-   ks_result)
+   ks_results)
 # ------------------------------------------------------------------------------
 
 # Time Series Plot: Wrapped by year
@@ -474,7 +474,7 @@ plot
     labs(
       title = "Distribution of Monthly Mortality by City",
       x = NULL,
-      y = "All-Cause Deaths"
+      y = "All-Cause Deaths per 100 000 Inhabitants"
     ) +
     ylim(1, 6.1) +
     theme_minimal() +
@@ -506,3 +506,4 @@ plot
 #   bg = "white",
 #   dpi = 300
 # )
+
