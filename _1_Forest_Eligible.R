@@ -789,7 +789,6 @@ rm(FN.Basic, FN.Synth, FP.Basic, FP.Synth)
   
   data.Final$basic.predict <- Pred.Basic
   data.Final$synth.predict <- Pred.Synth
-  data.Final$synth.complete <- Pred.Synth
   
   data.Final$basic.predict <- as.character(data.Final$basic.predict)
   data.Final$synth.predict <- as.character(data.Final$synth.predict)
